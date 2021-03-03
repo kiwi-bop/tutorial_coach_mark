@@ -17,7 +17,8 @@ class TargetFocus {
     this.alignSkip,
     this.paddingFocus,
     this.focusAnimationDuration,
-  }) : assert(keyTarget != null || targetPosition != null);
+    this.targetBounds
+  }) : assert(keyTarget != null || targetPosition != null || targetBounds != null);
 
   final dynamic identify;
   final GlobalKey keyTarget;
@@ -31,6 +32,7 @@ class TargetFocus {
   final AlignmentGeometry alignSkip;
   final double paddingFocus;
   final Duration focusAnimationDuration;
+  final Stream<Rect> targetBounds;
 
   @override
   String toString() {
