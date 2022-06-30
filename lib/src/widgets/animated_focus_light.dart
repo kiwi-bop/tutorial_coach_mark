@@ -94,7 +94,7 @@ class AnimatedFocusLightState extends State<AnimatedFocusLight>
     _controller.addStatusListener(_listener);
     _controllerPulse.addStatusListener(_listenerPulse);
 
-    WidgetsBinding.instance?.addPostFrameCallback((_) => _runFocus());
+    WidgetsBinding.instance.addPostFrameCallback((_) => _runFocus());
     super.initState();
   }
 
